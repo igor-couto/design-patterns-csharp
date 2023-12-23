@@ -7,7 +7,7 @@ public class PaymentServiceAdapter : IExistingPaymentService
 {
     private readonly NewPaymentService _newPaymentService = new NewPaymentService();
 
-    public void ProcessCreditCard(string cardNumber, float amount)
+    void ProcessCreditCard(string orderId, string cardNumber, float amount)
     {
         var transactionCode = Calcule(cardNumber);
         // Adapting the interface of NewPaymentService to IExistingPaymentService
