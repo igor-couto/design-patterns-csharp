@@ -1,4 +1,5 @@
 # Design Patterns in C#
+[![Build](https://github.com/igor-couto/design-patterns-csharp/actions/workflows/build.yml/badge.svg)](https://github.com/igor-couto/design-patterns-csharp/actions/workflows/build.yml)
 
 ## Facade
 _gof_
