@@ -3,6 +3,7 @@ using DesignPatterns.Adapter;
 using DesignPatterns.Adapter.Interfaces;
 using DesignPatterns.Decorator;
 using DesignPatterns.Decorator.Decorators;
+using DesignPatterns.Singleton;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
@@ -51,6 +52,13 @@ app.MapPost("/decorator/order", (double? discount, bool priority = false) =>
     return Results.Ok($"Description: {description}. Total Cost: {totalCost}");
 })
 .WithName("PlaceOrderWithDiscountAndPriority")
+.WithOpenApi();
+
+/* Singleton */
+app.MapGet("/singleton/company/id", 
+    () => Results.Ok($"Company Id: {CompanyInfoSingleton.Instance.FixedCompanyId}")
+)
+.WithName("GetCompanyId")
 .WithOpenApi();
 
 app.Run();

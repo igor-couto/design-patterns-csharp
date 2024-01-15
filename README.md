@@ -34,3 +34,14 @@ What problems can it solve?
 - A flexible alternative to subclassing for extending functionality should be provided.
 
 The Decorator pattern is particularly useful for adhering to the Open/Closed Principle, one of the SOLID principles, which states that software entities should be open for extension but closed for modification.
+
+## Singleton
+_gof_, _creational_
+
+The singleton pattern restricts the instantiation of a class to a singular instance. It is useful when exactly one object is needed to coordinate actions across a system.
+Singletons are often preferred to global variables because they do not pollute the global namespace (or their containing namespace). Additionally, they permit lazy allocation and initialization, whereas global variables in many languages will always consume resources
+
+The singleton pattern allows objects to:
+- Ensure they only have one instance
+- Provide easy access to that instance
+- Control their instantiation (for example, hiding the constructors of a class)
