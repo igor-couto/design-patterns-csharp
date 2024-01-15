@@ -45,3 +45,17 @@ The singleton pattern allows objects to:
 - Ensure they only have one instance
 - Provide easy access to that instance
 - Control their instantiation (for example, hiding the constructors of a class)
+
+## Builder
+_gof_, _creational_
+
+The builder pattern provide a flexible solution to various object creation problems in object-oriented programming. The intent of the builder design pattern is to separate the construction of a complex object from its representation. 
+
+The Builder design pattern solves problems like:
+- How can a class (the same construction process) create different representations of a complex object?
+- How can a class that includes creating a complex object be simplified?
+
+Advantages of the Builder pattern include:
+- Allows you to vary a product's internal representation.
+- Encapsulates code for construction and representation.
+- Provides control over the steps of the construction process.
